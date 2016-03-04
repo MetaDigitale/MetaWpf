@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 DomainLayer", "00 DomainLayer", "{671B87A0-F08C-4BEA-AE64-1D6C632F2613}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Infrastructure Layer", "01 Infrastructure Layer", "{D060687C-A543-4C22-AF09-7907F486D351}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99 Presentation Layer", "99 Presentation Layer", "{21F5567E-FFBA-421C-92FE-6AFECCEAF88A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaWpf.App", "MetaWpf.App\MetaWpf.App.csproj", "{83E2102A-3EE2-478B-B757-9A23B60EC1D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaWpf.Infrastructures", "MetaWpf.Infrastructures\MetaWpf.Infrastructures.csproj", "{FC07AF83-F08E-42CB-ADAA-A189E855D7CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "90 Modules", "90 Modules", "{23CFA5D3-A160-4E6F-AD6A-8C02F110CE60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaWpf.Modules.MainMenu", "MetaWpf.Modules.MainMenu\MetaWpf.Modules.MainMenu.csproj", "{FCA9785C-D3BC-441C-8AC7-70085261BB89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83E2102A-3EE2-478B-B757-9A23B60EC1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E2102A-3EE2-478B-B757-9A23B60EC1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E2102A-3EE2-478B-B757-9A23B60EC1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E2102A-3EE2-478B-B757-9A23B60EC1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC07AF83-F08E-42CB-ADAA-A189E855D7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC07AF83-F08E-42CB-ADAA-A189E855D7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC07AF83-F08E-42CB-ADAA-A189E855D7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC07AF83-F08E-42CB-ADAA-A189E855D7CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA9785C-D3BC-441C-8AC7-70085261BB89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA9785C-D3BC-441C-8AC7-70085261BB89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA9785C-D3BC-441C-8AC7-70085261BB89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA9785C-D3BC-441C-8AC7-70085261BB89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{83E2102A-3EE2-478B-B757-9A23B60EC1D8} = {21F5567E-FFBA-421C-92FE-6AFECCEAF88A}
+		{FC07AF83-F08E-42CB-ADAA-A189E855D7CA} = {D060687C-A543-4C22-AF09-7907F486D351}
+		{FCA9785C-D3BC-441C-8AC7-70085261BB89} = {23CFA5D3-A160-4E6F-AD6A-8C02F110CE60}
+	EndGlobalSection
+EndGlobal
