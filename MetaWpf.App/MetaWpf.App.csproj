@@ -131,9 +131,21 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\MetaWpf.Common.Resources\MetaWpf.Common.Resources.csproj">
+      <Project>{3c318476-0c54-4c87-a846-e76d8cbcfac8}</Project>
+      <Name>MetaWpf.Common.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaWpf.Common.UI\MetaWpf.Common.UI.csproj">
+      <Project>{9cf4f51f-04c0-4bdb-b999-1aa760df8326}</Project>
+      <Name>MetaWpf.Common.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MetaWpf.Infrastructures\MetaWpf.Infrastructures.csproj">
       <Project>{fc07af83-f08e-42cb-adaa-a189e855d7ca}</Project>
       <Name>MetaWpf.Infrastructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaWpf.Modules.Calculator\MetaWpf.Modules.Calculator.csproj">
+      <Project>{b04024ce-6ea4-4e33-8e2f-9a85757fc498}</Project>
+      <Name>MetaWpf.Modules.Calculator</Name>
     </ProjectReference>
     <ProjectReference Include="..\MetaWpf.Modules.MainMenu\MetaWpf.Modules.MainMenu.csproj">
       <Project>{fca9785c-d3bc-441c-8ac7-70085261bb89}</Project>

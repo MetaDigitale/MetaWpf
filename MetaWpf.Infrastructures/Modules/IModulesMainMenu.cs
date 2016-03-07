@@ -7,5 +7,6 @@ namespace MetaWpf.Infrastructures.Modules
     {
         event EventHandler<EventArgs> GestioneLog;
         event EventHandler<EventArgs> GestioneParametri;
+        event EventHandler<EventArgs> GestioneCalculator;
     }
 }

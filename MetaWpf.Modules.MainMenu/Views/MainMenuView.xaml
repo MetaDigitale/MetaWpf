@@ -39,7 +39,6 @@
                    FontFamily="Segoe UI" />
 
         <WrapPanel Grid.Row="1" Grid.Column="1" Width="940" Height="382" HorizontalAlignment="Left" VerticalAlignment="Top">
-
             <controls:Tile Style="{StaticResource LargeTileStyle}" 
                            Command="{Binding GestioneLog}">
                 <controls:Tile.Background>
@@ -50,6 +49,12 @@
                            Command="{Binding GestioneParametri}">
                 <controls:Tile.Background>
                     <ImageBrush ImageSource="pack://application:,,,/MetaWpf.Modules.MainMenu;component/Resources/GestioneParametri.jpg" />
+                </controls:Tile.Background>
+            </controls:Tile>
+            <controls:Tile Style="{StaticResource LargeTileStyle}"
+                           Command="{Binding GestioneCalculator}">
+                <controls:Tile.Background>
+                    <ImageBrush ImageSource="pack://application:,,,/MetaWpf.Modules.MainMenu;component/Resources/Gestione_Calculator.jpg" />
                 </controls:Tile.Background>
             </controls:Tile>
         </WrapPanel>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="MetaWpf.Common.UI.Toolbars.CalculatorToolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:toolbarControls="clr-namespace:MetaWpf.Common.UI.ToolbarsControls"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MetaWpf.Common.Resources;component/Toolbars/ToolbarsTooltip.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MetaWpf.Common.Resources;component/Toolbars/ToolbarsTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MetaWpf.Common.Resources;component/Toolbars/ToolbarsStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MetaWpf.Common.Resources;component/Theme/Paths.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <ToolBarTray Style="{StaticResource ToolbarTrayStyle}">
+        <ToolBar Style="{StaticResource ToolbarWithoutOverFlow}">
+            <Button ToolTip="{StaticResource BackTooltip}" 
+                    Style="{StaticResource ToolbarButtonStyle}" 
+                    Command="{Binding CloseCommand}">
+                <toolbarControls:ToolbarButtonContent PathData="{StaticResource BackPath}" />
+            </Button>
+            <toolbarControls:ToolbarSeparator />
+            <Button ToolTip="{StaticResource ComputeTooltip}" 
+                    Style="{StaticResource ToolbarButtonStyle}" 
+                    Command="{Binding ComputeCommand}">
+                <toolbarControls:ToolbarButtonContent PathData="{StaticResource ComputeIconPath}" />
+            </Button>
+        </ToolBar>
+    </ToolBarTray>
+</UserControl>
