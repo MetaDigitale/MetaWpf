@@ -2,6 +2,7 @@
 using System.Windows.Input;
 
 using MetaWpf.App.Abstracts;
+using MetaWpf.Common.Resources.MessageBoxes;
 using MetaWpf.Infrastructures;
 using MetaWpf.Infrastructures.Abstracts;
 using Microsoft.Practices.Unity;

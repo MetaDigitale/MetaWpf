@@ -64,6 +64,11 @@
     <Compile Include="CalculatorController.cs" />
     <Compile Include="CalculatorModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\LabelResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LabelResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\CalculatorViewModel.cs" />
     <Compile Include="Views\CalculatorView.xaml.cs">
       <DependentUpon>CalculatorView.xaml</DependentUpon>
@@ -72,7 +77,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Page Include="Resources\Templates.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -84,14 +88,28 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MetaWpf.Common.Resources\MetaWpf.Common.Resources.csproj">
+      <Project>{3c318476-0c54-4c87-a846-e76d8cbcfac8}</Project>
+      <Name>MetaWpf.Common.Resources</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MetaWpf.Common.UI\MetaWpf.Common.UI.csproj">
       <Project>{9cf4f51f-04c0-4bdb-b999-1aa760df8326}</Project>
       <Name>MetaWpf.Common.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetaWpf.Domain\MetaWpf.Domain.csproj">
+      <Project>{aa6bb4e0-3e6f-4bda-8fef-eb960d44045a}</Project>
+      <Name>MetaWpf.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\MetaWpf.Infrastructures\MetaWpf.Infrastructures.csproj">
       <Project>{fc07af83-f08e-42cb-adaa-a189e855d7ca}</Project>
       <Name>MetaWpf.Infrastructures</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LabelResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LabelResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

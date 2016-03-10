@@ -24,6 +24,17 @@
                 <toolbarControls:ToolbarButtonContent PathData="{StaticResource BackPath}" />
             </Button>
             <toolbarControls:ToolbarSeparator />
+            <Button ToolTip="{StaticResource AddTooltip}" 
+                    Style="{StaticResource ToolbarButtonStyle}" 
+                    Command="{Binding AddCommand}">
+                <toolbarControls:ToolbarButtonContent PathData="{StaticResource AddIconPath}" />
+            </Button>
+            <Button ToolTip="{StaticResource SubstractTooltip}" 
+                    Style="{StaticResource ToolbarButtonStyle}" 
+                    Command="{Binding SubstractCommand}">
+                <toolbarControls:ToolbarButtonContent PathData="{StaticResource SubstractIconPath}" />
+            </Button>
+            <toolbarControls:ToolbarSeparator />
             <Button ToolTip="{StaticResource ComputeTooltip}" 
                     Style="{StaticResource ToolbarButtonStyle}" 
                     Command="{Binding ComputeCommand}">

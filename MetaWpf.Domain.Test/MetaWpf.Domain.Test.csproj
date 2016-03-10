@@ -53,6 +53,12 @@
     <Compile Include="MathToolsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MetaWpf.Domain\MetaWpf.Domain.csproj">
+      <Project>{aa6bb4e0-3e6f-4bda-8fef-eb960d44045a}</Project>
+      <Name>MetaWpf.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

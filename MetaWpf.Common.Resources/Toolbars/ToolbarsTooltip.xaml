@@ -15,6 +15,10 @@
     <ToolTip x:Key="PrintTooltip" Content="Stampa"></ToolTip>
     <ToolTip x:Key="GridTooltip" Content="Griglia"></ToolTip>
     <ToolTip x:Key="ComputeTooltip" Content="Calcola"></ToolTip>
+    <ToolTip x:Key="AddTooltip" Content="Somma"></ToolTip>
+    <ToolTip x:Key="SubstractTooltip" Content="Sottrazione"></ToolTip>
+    <ToolTip x:Key="DivisionTooltip" Content="Divisione"></ToolTip>
+    <ToolTip x:Key="MultiplicationTooltip" Content="Moltiplicazione"></ToolTip>
     <ToolTip x:Key="BackTooltip" Content="Indietro"></ToolTip>
     
     <ToolTip x:Key="BoldTooltip" Content="Grassetto"></ToolTip>

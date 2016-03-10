@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:toolbars="clr-namespace:MetaWpf.Common.UI.Toolbars;assembly=MetaWpf.Common.UI"
+             xmlns:resources="clr-namespace:MetaWpf.Modules.Calculator.Resources;assembly=MetaWpf.Modules.Calculator"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
@@ -16,6 +17,9 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
+        <!--<Grid.Resources>
+            <resources:LabelResources x:Key="LabelResource" />
+        </Grid.Resources>-->
         <Grid.RowDefinitions>
             <RowDefinition Height="{DynamicResource ToolbarHeight}" />
             <RowDefinition Height="10" />
@@ -33,6 +37,51 @@
 
             <toolbars:CalculatorToolbar x:Name="ComputeToolbar" Grid.Column="0" />  
             <TextBlock Grid.Column="2" Text="Meta Calculator" Style="{DynamicResource ModulesTitle}" />
+        </Grid>
+        
+        <!-- Body -->
+        <Grid Grid.Row="2" Background="{DynamicResource MetroBackgroundBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{DynamicResource RowHeight}" />
+                    <RowDefinition Height="{DynamicResource RowHeight}" />
+                    <RowDefinition Height="{DynamicResource RowHeight}" />
+                    <RowDefinition Height="{DynamicResource RowHeight}" />
+                    <RowDefinition Height="{DynamicResource RowHeight}" />
+                    <RowDefinition Height="{DynamicResource RowHeight}" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="1" Grid.Column="0" Style="{DynamicResource RightAlignedLabel}" Content="Primo Numero" />
+                <Label Grid.Row="2" Grid.Column="0" Style="{DynamicResource RightAlignedLabel}" Content="Secondo Numero" />
+                <Label Grid.Row="4" Grid.Column="0" Style="{DynamicResource RightAlignedLabel}" Content="Risultato" />
+
+                <TextBox Grid.Row="1" Grid.Column="2" Width="80" 
+                         Style="{DynamicResource DetailTextBox}" 
+                         Text="{Binding Numero1, Mode=TwoWay}" />
+                <TextBox Grid.Row="2" Grid.Column="2" Width="80" 
+                         Style="{DynamicResource DetailTextBox}" 
+                         Text="{Binding Numero2, Mode=TwoWay}" />
+                <TextBox Grid.Row="4" Grid.Column="2" Width="80" 
+                         Style="{DynamicResource DetailTextBox}" 
+                         Text="{Binding Result, Mode=TwoWay}" 
+                         IsEnabled="False"/>
+            </Grid>
         </Grid>
 
     </Grid>
