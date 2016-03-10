@@ -40,5 +40,13 @@ namespace MetaWpf.Modules.MainMenu
             var handler = this.GestioneParametri;
             handler?.Invoke(this, new EventArgs());
         }
+
+        public event EventHandler<EventArgs> GestioneCalculator;
+
+        internal void InvokeGestioneCalculator(object parameter)
+        {
+            var handler = this.GestioneCalculator;
+            handler?.Invoke(this, new EventArgs());
+        }
     }
 }
