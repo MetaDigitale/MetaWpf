@@ -3,6 +3,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/MetaWpf.Modules.MainMenu;component/Resources/Templates.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetaWpf.Modules.Calculator;component/Resources/Templates.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="CenterdUserControlStyle" TargetType="UserControl">

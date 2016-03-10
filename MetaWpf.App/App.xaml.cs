@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Windows;
+
+using Microsoft.Practices.Unity;
+
 using MetaWpf.App.Abstracts;
 using MetaWpf.Infrastructures;
+using MetaWpf.Modules.Calculator;
 using MetaWpf.Modules.MainMenu;
-using Microsoft.Practices.Unity;
 
 namespace MetaWpf.App
 {
@@ -20,7 +23,8 @@ namespace MetaWpf.App
             // Registro i Moduli
             container.Resolve<MetaWpfBoot>()
                 .RegisterModule(typeof (MetaModule))
-                .RegisterModule(typeof(MainMenuModule));
+                .RegisterModule(typeof(MainMenuModule))
+                .RegisterModule(typeof(CalculatorModule));
 
             // start App
             container.Resolve<IMetaShell>().Show();

@@ -1,9 +1,11 @@
 ﻿using System.Threading;
+
+using Microsoft.Practices.Unity;
+
 using MetaWpf.Infrastructures;
 using MetaWpf.Infrastructures.Abstracts;
 using MetaWpf.Infrastructures.Model;
 using MetaWpf.Infrastructures.Modules;
-using Microsoft.Practices.Unity;
 
 namespace MetaWpf.App
 {
@@ -49,6 +51,7 @@ namespace MetaWpf.App
             // Imposto gli event handlers del menu
             mainMenu.GestioneParametri += this.MainMenu_GestioneParametri;
             mainMenu.GestioneLog += this.MainMenu_GestioneLog;
+            mainMenu.GestioneCalculator += this.MainMenu_GestioneCalculator;
 
             // Avvio il menu
             mainMenu.Run();
@@ -62,20 +65,48 @@ namespace MetaWpf.App
 
             mainMenu.GestioneParametri -= this.MainMenu_GestioneParametri;
             mainMenu.GestioneLog -= this.MainMenu_GestioneLog;
+            mainMenu.GestioneCalculator -= this.MainMenu_GestioneCalculator;
         }
 
+        #region GestioneLog
         private void MainMenu_GestioneLog(object sender, System.EventArgs e)
         {
             this.CleanMainMenuEvents(sender);
 
             // TODO: Run LogManager
         }
+        #endregion
 
+        #region GestioneParametri
         private void MainMenu_GestioneParametri(object sender, System.EventArgs e)
         {
             this.CleanMainMenuEvents(sender);
 
             // TODO: Run SettingsManager
         }
+        #endregion
+
+        #region GestioneCalculator
+        private void MainMenu_GestioneCalculator(object sender, System.EventArgs e)
+        {
+            this.CleanMainMenuEvents(sender);
+
+            var gestionCalculator = this._sessionContainer.Resolve<IModulesCalculator>();
+            this._container.RegisterInstance(gestionCalculator);
+
+            gestionCalculator.CloseGestioneCalculator += this.GestionCalculator_CloseGestioneCalculator;
+            gestionCalculator.Run();
+        }
+
+        private void GestionCalculator_CloseGestioneCalculator(object sender, System.EventArgs e)
+        {
+            var gestioneCalculator = sender as IModulesCalculator;
+
+            if (gestioneCalculator == null) return;
+
+            gestioneCalculator.CloseGestioneCalculator -= this.GestionCalculator_CloseGestioneCalculator;
+           this.RunMainMenu();
+        }
+        #endregion
     }
 }
